@@ -1,6 +1,10 @@
 import {Container} from "lucide-react";
+import Button from "./ui/Button";
+import {useOutletContext} from "react-router";
 
 const Navbar = () => {
+    const isSignedIn = true;
+    const username = 'Niladree';
     const handleAuthClick = async()=>{};
     return (
         <header className="navbar">
@@ -21,14 +25,27 @@ const Navbar = () => {
                 </div>
 
                 <div className="actions">
-                    <button onClick={handleAuthClick} className="login">
-                        Log In
-                    </button>
+                    {isSignedIn ? (
+                        <>
+                            <span className="greeting">
+                                {username ? `Welcome, ${username}` : 'Signed in'}
+                            </span>
 
-                    <a href="#upload"
-                       className="cta">Get
-                        Started</a>
+                            <Button size="sm" onClick={handleAuthClick} className="btn">
+                                Log Out
+                            </Button>
+                        </>
+                    ) : (
+                        <>
+                            <Button onClick={handleAuthClick} size="sm" variant="ghost">
+                                Log In
+                            </Button>
+
+                            <a href="#upload" className="cta">Get Started</a>
+                        </>
+                    )}
                 </div>
+
             </nav>
         </header>
     )

@@ -19,6 +19,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -69,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774978657578</updated>
       <workItem from="1774978658623" duration="1010000" />
-      <workItem from="1774979740822" duration="7834000" />
+      <workItem from="1774979740822" duration="8671000" />
     </task>
     <servers />
   </component>
