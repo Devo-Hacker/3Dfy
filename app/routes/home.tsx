@@ -2,7 +2,7 @@ import type { Route } from "./+types/home";
 import Navbar from "../../components/Navbar"
 import {ArrowRight, ArrowUpRight, Clock, Layers} from "lucide-react";
 import Button from "../../components/ui/Button";
-// import Upload from "../../components/Upload";
+import Upload from "../../components/ui/Upload";
 // import {useNavigate} from "react-router";
 // import {useEffect, useRef, useState} from "react";
 // import {createProject, getProjects} from "../../lib/puter.action";
@@ -46,7 +46,7 @@ export default function Home() {
                         <p>Supports JPG, PNG, formats up to 10MB</p>
                     </div>
 
-                    {/*<Upload onComplete={handleUploadComplete} />*/}
+                    <Upload />
                 </div>
             </div>
         </section>
