@@ -6,7 +6,22 @@ const Navbar = () => {
     const { isSignedIn, username, signIn, signOut } = useOutletContext<AuthContext>()
     // const isSignedIn = true;
     // const username = 'Niladree';
-    const handleAuthClick = async()=>{};
+    const handleAuthClick = async()=>{
+        if(isSignedIn){
+            try{
+                await signOut();
+            } catch(e){
+                console.error(`signed out error: ${e}`);
+            }
+            return;
+        }
+        try{
+            await signIn();
+        }
+        catch(e){
+            console.error(`signed in error: ${e}`);
+        }
+    };
     return (
         <header className="navbar">
             <nav className="inner">
